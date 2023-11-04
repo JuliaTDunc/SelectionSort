@@ -32,7 +32,9 @@ function selectionSortInPlace(arr) {
   while(divider < arr.length-1) {
   
     // Find the index of the minimum value in the unsorted half
-  
+    let sub = [...arr];
+    let newSub = sub.splice(divider);
+    let min = Math.min(...newSub);
   
     // Save the min value
 
@@ -44,6 +46,6 @@ function selectionSortInPlace(arr) {
     divider++;
   }
 }
-
+  console.log(selectionSortInPlace([1,5,2,7,3]));
 
 module.exports = [selectionSort, selectionSortInPlace];
